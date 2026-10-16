@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_play_reader_picks",
+  "info": {
+    "displayName": "Reader pick",
+    "icon": "crown",
+    "description": "How many readers picked a contestant in a prediction game, and how many picked her to win."
+  },
+  "options": {},
+  "attributes": {
+    "contestant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::contestant.contestant"
+    },
+    "votes": {
+      "type": "integer",
+      "default": 0
+    },
+    "winnerVotes": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

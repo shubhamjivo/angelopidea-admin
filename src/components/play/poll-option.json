@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_play_poll_options",
+  "info": {
+    "displayName": "Poll option",
+    "icon": "check",
+    "description": "One answer of a poll and the votes it received."
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "votes": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

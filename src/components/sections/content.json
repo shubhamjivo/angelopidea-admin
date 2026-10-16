@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_sections_contents",
+  "info": {
+    "displayName": "Content section",
+    "icon": "layout",
+    "description": "One section of a page. The slug tells the website which block shows it."
+  },
+  "options": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "regex": "^[A-Za-z0-9\\-_]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

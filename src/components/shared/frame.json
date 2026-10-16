@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_frames",
+  "info": {
+    "displayName": "Frame",
+    "icon": "landscape",
+    "description": "One picture of a photo story, with its heading and caption."
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "regex": "^[A-Za-z0-9\\-_.~]*$"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "caption": {
+      "type": "text"
+    }
+  }
+}

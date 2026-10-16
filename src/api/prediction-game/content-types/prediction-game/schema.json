@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "prediction_games",
+  "info": {
+    "singularName": "prediction-game",
+    "pluralName": "prediction-games",
+    "displayName": "Prediction Game",
+    "description": "A game where readers predict the top finishers of a pageant edition."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "predict": {
+      "type": "string"
+    },
+    "picks": {
+      "type": "integer"
+    },
+    "openedOn": {
+      "type": "date"
+    },
+    "closesOn": {
+      "type": "date"
+    },
+    "stopped": {
+      "type": "boolean",
+      "default": false
+    },
+    "pageant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pageant.pageant"
+    },
+    "edition": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::edition.edition"
+    },
+    "readerPicks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "play.reader-pick"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "legacyId": {
+      "type": "integer",
+      "private": true
+    }
+  }
+}

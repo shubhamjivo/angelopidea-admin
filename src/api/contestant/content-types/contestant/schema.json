@@ -1,0 +1,99 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contestants",
+  "info": {
+    "singularName": "contestant",
+    "pluralName": "contestants",
+    "displayName": "Contestant",
+    "description": "A delegate or titleholder."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "alternateName": {
+      "type": "string"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country"
+    },
+    "portrait": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "ageAsOf": {
+      "type": "date"
+    },
+    "heightCm": {
+      "type": "decimal"
+    },
+    "website": {
+      "type": "string"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "instagram": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "likes": {
+      "type": "integer",
+      "default": 0
+    },
+    "dislikes": {
+      "type": "integer",
+      "default": 0
+    },
+    "loves": {
+      "type": "integer",
+      "default": 0
+    },
+    "flowers": {
+      "type": "integer",
+      "default": 0
+    },
+    "entries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::edition-entry.edition-entry",
+      "mappedBy": "contestant"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "legacyId": {
+      "type": "integer",
+      "private": true
+    }
+  }
+}

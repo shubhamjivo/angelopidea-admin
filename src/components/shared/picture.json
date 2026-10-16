@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_pictures",
+  "info": {
+    "displayName": "Picture",
+    "icon": "picture",
+    "description": "An image with its caption and photo credit."
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "caption": {
+      "type": "text"
+    },
+    "credit": {
+      "type": "string"
+    }
+  }
+}

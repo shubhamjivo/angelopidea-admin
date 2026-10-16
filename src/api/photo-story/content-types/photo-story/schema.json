@@ -1,0 +1,83 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photo_stories",
+  "info": {
+    "singularName": "photo-story",
+    "pluralName": "photo-stories",
+    "displayName": "Photo Story",
+    "description": "A News In Pictures album: a set of captioned pictures on one subject."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "dek": {
+      "type": "text"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "frames": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.frame"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author"
+    },
+    "publishedOn": {
+      "type": "date",
+      "required": true
+    },
+    "pageants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pageant.pageant"
+    },
+    "editions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::edition.edition"
+    },
+    "contestants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contestant.contestant"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country"
+    },
+    "continents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::continent.continent"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "legacyId": {
+      "type": "integer",
+      "private": true
+    }
+  }
+}

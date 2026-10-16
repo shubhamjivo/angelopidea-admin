@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_quotes",
+  "info": {
+    "displayName": "Quote",
+    "icon": "quote",
+    "description": "A pull quote and who said it."
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "credit": {
+      "type": "string"
+    }
+  }
+}

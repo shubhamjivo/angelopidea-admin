@@ -1,0 +1,143 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": "News, features, opinions, specials and interviews."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "section": {
+      "type": "enumeration",
+      "enum": [
+        "news",
+        "featured",
+        "opinions",
+        "specials",
+        "interviews"
+      ],
+      "default": "news",
+      "required": true
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "kicker": {
+      "type": "string"
+    },
+    "dek": {
+      "type": "text"
+    },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "cover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.picture"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "quote": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.quote"
+    },
+    "relatedLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "videoUrl": {
+      "type": "string"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "articles"
+    },
+    "pageants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pageant.pageant"
+    },
+    "editions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::edition.edition"
+    },
+    "contestants": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::contestant.contestant"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country"
+    },
+    "continents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::continent.continent"
+    },
+    "publishedOn": {
+      "type": "date",
+      "required": true
+    },
+    "needsReview": {
+      "type": "boolean",
+      "default": false
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "legacyId": {
+      "type": "integer",
+      "private": true
+    },
+    "legacyTitle": {
+      "type": "string",
+      "private": true
+    },
+    "legacyHtml": {
+      "type": "text",
+      "private": true
+    }
+  }
+}

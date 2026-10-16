@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_shared_title_awards",
+  "info": {
+    "displayName": "Title or award",
+    "icon": "crown",
+    "description": "A title or special award won at an edition."
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer"
+    }
+  }
+}

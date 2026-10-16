@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "editions",
+  "info": {
+    "singularName": "edition",
+    "pluralName": "editions",
+    "displayName": "Edition",
+    "description": "One yearly staging of a pageant, such as Miss Earth 2021."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "alternateName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "pageant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pageant.pageant",
+      "inversedBy": "editions"
+    },
+    "year": {
+      "type": "integer",
+      "required": true
+    },
+    "editionNumber": {
+      "type": "integer"
+    },
+    "finalDate": {
+      "type": "date"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "intro": {
+      "type": "text"
+    },
+    "about": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "entries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::edition-entry.edition-entry",
+      "mappedBy": "edition"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    },
+    "legacyId": {
+      "type": "integer",
+      "private": true
+    }
+  }
+}

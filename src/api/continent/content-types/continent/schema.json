@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "continents",
+  "info": {
+    "singularName": "continent",
+    "pluralName": "continents",
+    "displayName": "Continent",
+    "description": "Continents, used to group countries."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "order": {
+      "type": "integer"
+    },
+    "countries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::country.country",
+      "mappedBy": "continent"
+    },
+    "legacyId": {
+      "type": "integer",
+      "private": true
+    }
+  }
+}

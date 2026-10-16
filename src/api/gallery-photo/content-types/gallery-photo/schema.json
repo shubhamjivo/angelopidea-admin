@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gallery_photos",
+  "info": {
+    "singularName": "gallery-photo",
+    "pluralName": "gallery-photos",
+    "displayName": "Gallery Photo",
+    "description": "One photo from the photo gallery, filed under a contestant and the edition she competed in."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "category": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "contestant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::contestant.contestant"
+    },
+    "edition": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::edition.edition"
+    },
+    "pageant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pageant.pageant"
+    },
+    "eventName": {
+      "type": "string"
+    },
+    "awardName": {
+      "type": "string"
+    },
+    "postedOn": {
+      "type": "date"
+    },
+    "legacyId": {
+      "type": "integer",
+      "private": true
+    }
+  }
+}

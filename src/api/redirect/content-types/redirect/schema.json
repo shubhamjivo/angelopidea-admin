@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "redirects",
+  "info": {
+    "singularName": "redirect",
+    "pluralName": "redirects",
+    "displayName": "Redirect",
+    "description": "Sends visitors from an old address to a new one."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "source": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "destination": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

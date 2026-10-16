@@ -129,3 +129,8 @@ dist
 build
 .strapi-updater.json
 .strapi-cloud.json
+# Migration reports
+migration-output/
+
+# Local media dumps (archives are already covered by *.7z and *.zip)
+public/newspic folder/

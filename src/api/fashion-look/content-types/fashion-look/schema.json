@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fashion_looks",
+  "info": {
+    "singularName": "fashion-look",
+    "pluralName": "fashion-looks",
+    "displayName": "Fashion & Beauty",
+    "description": "A gown or look from the Fashion and Beauty section: who wore it, who made it and the story behind it."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "wornBy": {
+      "type": "string",
+      "required": true
+    },
+    "designer": {
+      "type": "string"
+    },
+    "pageant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::pageant.pageant"
+    },
+    "dek": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "imageAlt": {
+      "type": "string"
+    },
+    "credit": {
+      "type": "string"
+    },
+    "body": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "order": {
+      "type": "integer"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

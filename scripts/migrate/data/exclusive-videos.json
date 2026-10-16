@@ -1,0 +1,162 @@
+[
+  {
+    "group": "exclusiveInterview",
+    "order": 1,
+    "title": "Nicole Spiteri, Miss World Malta 2026",
+    "kicker": "Exclusive",
+    "date": "11 July 2026",
+    "image": "/images/instagram/interview-nicole.jpg",
+    "video": "/videos/instagram/interview-nicole.mp4",
+    "href": "https://www.instagram.com/reel/Dapmj-Fo2UA/"
+  },
+  {
+    "group": "exclusiveInterview",
+    "order": 2,
+    "title": "Kii Huutoniemi, Miss World Finland 2026",
+    "kicker": "Exclusive",
+    "date": "3 June 2026",
+    "image": "/images/instagram/interview-kii.jpg",
+    "video": "/videos/instagram/interview-kii.mp4",
+    "href": "https://www.instagram.com/reel/DZHUYYcpVYk/"
+  },
+  {
+    "group": "exclusiveInterview",
+    "order": 3,
+    "title": "Sandra Alvarado, Miss World Ecuador 2024",
+    "kicker": "Exclusive",
+    "date": "5 April 2026",
+    "image": "/images/instagram/interview-sandra.jpg",
+    "video": "/videos/instagram/interview-sandra.mp4",
+    "href": "https://www.instagram.com/reel/DWv933Siema/"
+  },
+  {
+    "group": "exclusiveInterview",
+    "order": 4,
+    "title": "Ros Mary Meza, Miss Universe Malta Top 20 Finalist",
+    "kicker": "Exclusive",
+    "date": "17 March 2026",
+    "image": "/images/instagram/interview-rosmary.jpg",
+    "video": "/videos/instagram/interview-rosmary.mp4",
+    "href": "https://www.instagram.com/reel/DV_ejYliXzX/"
+  },
+  {
+    "group": "otherInterview",
+    "order": 1,
+    "title": "Miss World 2021 Head to Head, Group 1",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-1.jpg",
+    "href": "https://www.youtube.com/watch?v=5wpBMCSe1ks"
+  },
+  {
+    "group": "otherInterview",
+    "order": 2,
+    "title": "Miss World 2021 Head to Head, Group 2",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-2.jpg",
+    "href": "https://www.youtube.com/watch?v=A3gKjF1KIok"
+  },
+  {
+    "group": "otherInterview",
+    "order": 3,
+    "title": "Miss World 2021 Head to Head, Group 3",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-3.jpg",
+    "href": "https://www.youtube.com/watch?v=W3xj436d7WA"
+  },
+  {
+    "group": "otherInterview",
+    "order": 4,
+    "title": "Miss World 2021 Head to Head, Group 4",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-4.jpg",
+    "href": "https://www.youtube.com/watch?v=sWxp9B8D06Q"
+  },
+  {
+    "group": "otherInterview",
+    "order": 5,
+    "title": "Miss World 2021 Head to Head, Group 5",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-5.jpg",
+    "href": "https://www.youtube.com/watch?v=f7qp8hogFUk"
+  },
+  {
+    "group": "otherInterview",
+    "order": 6,
+    "title": "Miss World 2021 Head to Head, Group 6",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-6.jpg",
+    "href": "https://www.youtube.com/watch?v=UwrdUKq04w4"
+  },
+  {
+    "group": "otherInterview",
+    "order": 7,
+    "title": "Miss World 2021 Head to Head, Group 7",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-7.jpg",
+    "href": "https://www.youtube.com/watch?v=chjSM_wiFeU"
+  },
+  {
+    "group": "otherInterview",
+    "order": 8,
+    "title": "Miss World 2021 Head to Head, Group 8",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-8.jpg",
+    "href": "https://www.youtube.com/watch?v=AAZJLeqy4Ww"
+  },
+  {
+    "group": "otherInterview",
+    "order": 9,
+    "title": "Miss World 2021 Head to Head, Group 9",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-9.jpg",
+    "href": "https://www.youtube.com/watch?v=fMJGYUg9tVM"
+  },
+  {
+    "group": "otherInterview",
+    "order": 10,
+    "title": "Miss World 2021 Head to Head, Group 10",
+    "kicker": "Interview",
+    "date": "Miss World 2021",
+    "image": "/images/miss-world/video-group-10.jpg",
+    "href": "https://www.youtube.com/watch?v=dqzLPaFcaVU"
+  },
+  {
+    "group": "finalVideo",
+    "order": 1,
+    "title": "The Crowning of Joheirry Mola",
+    "kicker": "Final",
+    "date": "5 September 2026",
+    "image": "/images/instagram/mw-crowning.jpg",
+    "video": "/videos/instagram/crowning.mp4",
+    "href": "https://www.instagram.com/reel/Dc63VSeS_xh/"
+  },
+  {
+    "group": "finalVideo",
+    "order": 2,
+    "title": "The Night the Crown Went to the Dominican Republic",
+    "kicker": "Final",
+    "date": "5 September 2026",
+    "image": "/images/instagram/mw-reel-crown.jpg",
+    "video": "/videos/instagram/night.mp4",
+    "href": "https://www.instagram.com/reel/Dc6dkrCzqFV/"
+  },
+  {
+    "group": "finalVideo",
+    "order": 3,
+    "title": "The Royal Court of Miss World 2026",
+    "kicker": "Final",
+    "date": "6 September 2026",
+    "image": "/images/instagram/mw-reel-court.jpg",
+    "video": "/videos/instagram/court.mp4",
+    "href": "https://www.instagram.com/reel/Dc8thZpTdCI/"
+  }
+]

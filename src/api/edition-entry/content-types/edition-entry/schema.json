@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edition_entries",
+  "info": {
+    "singularName": "edition-entry",
+    "pluralName": "edition-entries",
+    "displayName": "Edition Entry",
+    "description": "A contestant taking part in one edition: who she represented, her portrait and how she placed."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "edition": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::edition.edition",
+      "inversedBy": "entries"
+    },
+    "contestant": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::contestant.contestant",
+      "inversedBy": "entries"
+    },
+    "representing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::country.country"
+    },
+    "portrait": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "order": {
+      "type": "integer"
+    },
+    "placement": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "winner",
+        "runnerUp",
+        "finalist",
+        "special"
+      ],
+      "default": "none",
+      "required": true
+    },
+    "placementLabel": {
+      "type": "string"
+    },
+    "placementOrder": {
+      "type": "integer"
+    },
+    "titles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.title-award"
+    },
+    "winnerPhoto": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "legacyId": {
+      "type": "integer",
+      "private": true
+    }
+  }
+}
