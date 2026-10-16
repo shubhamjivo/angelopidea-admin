@@ -1,8 +1,9 @@
 import type { Core } from '@strapi/strapi';
-
 const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server => ({
   host: env('HOST', '0.0.0.0'),
   port: env.int('PORT', 1337),
+  url: env('PUBLIC_URL', 'http://admin.angelopedia.com'),
+  proxy: true,
   app: {
     keys: env.array('APP_KEYS')!,
   },
@@ -10,5 +11,6 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Server =>
     populateRelations: env.bool('WEBHOOKS_POPULATE_RELATIONS', false),
   },
 });
+
 
 export default config;
