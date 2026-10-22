@@ -4,7 +4,7 @@
   "info": {
     "singularName": "pageant",
     "pluralName": "pageants",
-    "displayName": "Pageant",
+    "displayName": "Pageant (pgnt.)",
     "description": "A pageant organisation, such as Miss Earth."
   },
   "options": {
@@ -26,15 +26,15 @@
     },
     "tier": {
       "type": "enumeration",
+      "required": true,
+      "default": "national",
       "enum": [
         "big4",
         "international",
         "regional",
         "national",
         "other"
-      ],
-      "required": true,
-      "default": "national"
+      ]
     },
     "country": {
       "type": "relation",
@@ -97,8 +97,8 @@
     },
     "seo": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "repeatable": false
     },
     "legacyId": {
       "type": "integer",

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "edition-entry",
     "pluralName": "edition-entries",
-    "displayName": "Edition Entry",
+    "displayName": "Pgnt. Edition Entry",
     "description": "A contestant taking part in one edition: who she represented, her portrait and how she placed."
   },
   "options": {
@@ -45,15 +45,15 @@
     },
     "placement": {
       "type": "enumeration",
+      "required": true,
+      "default": "none",
       "enum": [
         "none",
         "winner",
         "runnerUp",
         "finalist",
         "special"
-      ],
-      "default": "none",
-      "required": true
+      ]
     },
     "placementLabel": {
       "type": "string"
@@ -63,8 +63,8 @@
     },
     "titles": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.title-award"
+      "component": "shared.title-award",
+      "repeatable": true
     },
     "winnerPhoto": {
       "type": "media",

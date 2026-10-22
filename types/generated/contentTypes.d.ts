@@ -727,7 +727,7 @@ export interface ApiEditionEntryEditionEntry
   collectionName: 'edition_entries';
   info: {
     description: 'A contestant taking part in one edition: who she represented, her portrait and how she placed.';
-    displayName: 'Edition Entry';
+    displayName: 'Pgnt. Edition Entry';
     pluralName: 'edition-entries';
     singularName: 'edition-entry';
   };
@@ -777,7 +777,7 @@ export interface ApiEditionEdition extends Struct.CollectionTypeSchema {
   collectionName: 'editions';
   info: {
     description: 'One yearly staging of a pageant, such as Miss Earth 2021.';
-    displayName: 'Edition';
+    displayName: 'Pgnt. Edition';
     pluralName: 'editions';
     singularName: 'edition';
   };
@@ -987,7 +987,7 @@ export interface ApiPageantPageant extends Struct.CollectionTypeSchema {
   collectionName: 'pageants';
   info: {
     description: 'A pageant organisation, such as Miss Earth.';
-    displayName: 'Pageant';
+    displayName: 'Pageant (pgnt.)';
     pluralName: 'pageants';
     singularName: 'pageant';
   };
@@ -1045,7 +1045,7 @@ export interface ApiPhotoStoryPhotoStory extends Struct.CollectionTypeSchema {
   collectionName: 'photo_stories';
   info: {
     description: 'A News In Pictures album: a set of captioned pictures on one subject.';
-    displayName: 'Photo Story';
+    displayName: 'News in Pictures';
     pluralName: 'photo-stories';
     singularName: 'photo-story';
   };

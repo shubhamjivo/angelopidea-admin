@@ -6,6 +6,7 @@ import '@fontsource/poppins/700.css';
 
 import logo from './extensions/logo.svg';
 import icon from './extensions/icon.svg';
+import { EditionFilter, installEditionFilter } from './extensions/edition-filter';
 
 // Brand colours from the frontend (angelopedia/app/globals.css):
 // accent red #be1e2d, light red #ff7582, ink #414042, greys #5c5c5e / #cccccc.
@@ -88,7 +89,14 @@ export default {
     tutorials: false,
     notifications: { releases: false },
   },
-  bootstrap(_app: StrapiApp) {
+  bootstrap(app: StrapiApp) {
+    // The edition picker lists only editions of the pageants chosen beside it.
+    app.getPlugin('content-manager').injectComponent('editView', 'right-links', {
+      name: 'edition-filter',
+      Component: EditionFilter,
+    });
+    installEditionFilter();
+
     // The design system sets its own font stack; use the frontend's Poppins instead.
     const style = document.createElement('style');
     style.textContent = `html body, html body button, html body input, html body textarea, html body select { font-family: ${FONT}; }`;

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "photo-story",
     "pluralName": "photo-stories",
-    "displayName": "Photo Story",
+    "displayName": "News in Pictures",
     "description": "A News In Pictures album: a set of captioned pictures on one subject."
   },
   "options": {
@@ -33,8 +33,8 @@
     },
     "frames": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.frame"
+      "component": "shared.frame",
+      "repeatable": true
     },
     "author": {
       "type": "relation",
@@ -72,8 +72,8 @@
     },
     "seo": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.seo"
+      "component": "shared.seo",
+      "repeatable": false
     },
     "legacyId": {
       "type": "integer",
