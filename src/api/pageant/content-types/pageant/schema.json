@@ -72,6 +72,12 @@
     "facebook": {
       "type": "string"
     },
+    "applyUrl": {
+      "type": "string"
+    },
+    "howToApply": {
+      "type": "text"
+    },
     "intro": {
       "type": "text"
     },

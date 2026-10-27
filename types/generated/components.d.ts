@@ -1,5 +1,20 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface PageantScheduleItem extends Struct.ComponentSchema {
+  collectionName: 'components_pageant_schedule_items';
+  info: {
+    description: "One date on an edition's calendar, such as a casting, the arrivals or the finale.";
+    displayName: 'Schedule item';
+    icon: 'calendar';
+  };
+  attributes: {
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
+    endDate: Schema.Attribute.Date;
+    event: Schema.Attribute.String & Schema.Attribute.Required;
+    location: Schema.Attribute.String;
+  };
+}
+
 export interface PlayPollOption extends Struct.ComponentSchema {
   collectionName: 'components_play_poll_options';
   info: {
@@ -138,6 +153,7 @@ export interface SharedTitleAward extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'pageant.schedule-item': PageantScheduleItem;
       'play.poll-option': PlayPollOption;
       'play.reader-pick': PlayReaderPick;
       'sections.content': SectionsContent;

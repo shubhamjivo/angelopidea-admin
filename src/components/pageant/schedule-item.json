@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_pageant_schedule_items",
+  "info": {
+    "displayName": "Schedule item",
+    "icon": "calendar",
+    "description": "One date on an edition's calendar, such as a casting, the arrivals or the finale."
+  },
+  "options": {},
+  "attributes": {
+    "event": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string"
+    }
+  }
+}

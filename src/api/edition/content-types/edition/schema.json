@@ -46,6 +46,17 @@
     "city": {
       "type": "string"
     },
+    "applicationOpens": {
+      "type": "date"
+    },
+    "applicationDeadline": {
+      "type": "date"
+    },
+    "schedule": {
+      "type": "component",
+      "component": "pageant.schedule-item",
+      "repeatable": true
+    },
     "intro": {
       "type": "text"
     },

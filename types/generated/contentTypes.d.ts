@@ -793,6 +793,8 @@ export interface ApiEditionEdition extends Struct.CollectionTypeSchema {
         }
       >;
     alternateName: Schema.Attribute.String;
+    applicationDeadline: Schema.Attribute.Date;
+    applicationOpens: Schema.Attribute.Date;
     city: Schema.Attribute.String;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -815,6 +817,7 @@ export interface ApiEditionEdition extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String & Schema.Attribute.Required;
     pageant: Schema.Attribute.Relation<'manyToOne', 'api::pageant.pageant'>;
     publishedAt: Schema.Attribute.DateTime;
+    schedule: Schema.Attribute.Component<'pageant.schedule-item', true>;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
@@ -1003,6 +1006,7 @@ export interface ApiPageantPageant extends Struct.CollectionTypeSchema {
         }
       >;
     alternateName: Schema.Attribute.String;
+    applyUrl: Schema.Attribute.String;
     country: Schema.Attribute.Relation<'manyToOne', 'api::country.country'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1011,6 +1015,7 @@ export interface ApiPageantPageant extends Struct.CollectionTypeSchema {
     facebook: Schema.Attribute.String;
     foundedYear: Schema.Attribute.Integer;
     headquarters: Schema.Attribute.String;
+    howToApply: Schema.Attribute.Text;
     images: Schema.Attribute.Media<'images', true>;
     intro: Schema.Attribute.Text;
     keyPeople: Schema.Attribute.Text;
