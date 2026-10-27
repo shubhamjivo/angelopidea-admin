@@ -5,7 +5,7 @@
     "singularName": "tag",
     "pluralName": "tags",
     "displayName": "Tag",
-    "description": "A label editors put on stories. Some tags place a story in a homepage block (Top story, Headline, Most read)."
+    "description": "A label editors put on stories. Some tags place a story in a homepage block (Top story, Headline, Most read, More news); Top story 1–4 put a story in that exact mosaic tile."
   },
   "options": {
     "draftAndPublish": false

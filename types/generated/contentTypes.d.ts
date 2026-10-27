@@ -1202,7 +1202,7 @@ export interface ApiRedirectRedirect extends Struct.CollectionTypeSchema {
 export interface ApiTagTag extends Struct.CollectionTypeSchema {
   collectionName: 'tags';
   info: {
-    description: 'A label editors put on stories. Some tags place a story in a homepage block (Top story, Headline, Most read).';
+    description: 'A label editors put on stories. Some tags place a story in a homepage block (Top story, Headline, Most read, More news); Top story 1\u20134 put a story in that exact mosaic tile.';
     displayName: 'Tag';
     pluralName: 'tags';
     singularName: 'tag';
