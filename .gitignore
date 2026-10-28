@@ -134,3 +134,10 @@ migration-output/
 
 # Local media dumps (archives are already covered by *.7z and *.zip)
 public/newspic folder/
+
+
+
+/types/generated/components.d.ts
+/types/generated/contentTypes.d.ts
+/ecosystem.config.js
+/web.config
