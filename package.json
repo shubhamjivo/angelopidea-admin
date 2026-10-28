@@ -18,6 +18,7 @@
     "migrate:fashion": "node --env-file=.env scripts/migrate/fashion.mjs",
     "migrate:pages": "node --env-file=.env scripts/migrate/pages.mjs",
     "migrate:tags": "node --env-file=.env scripts/migrate/tags.mjs",
+    "migrate:event-tags": "node --env-file=.env scripts/migrate/event-tags.mjs",
     "migrate:seo": "node --env-file=.env scripts/migrate/seo.mjs",
     "migrate:photos": "node --env-file=.env scripts/migrate/photo-stories.mjs",
     "migrate:redirects": "node --env-file=.env scripts/migrate/redirects.mjs",

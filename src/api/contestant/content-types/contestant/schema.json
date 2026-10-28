@@ -48,6 +48,42 @@
     "heightCm": {
       "type": "decimal"
     },
+    "heightFeet": {
+      "type": "decimal"
+    },
+    "heightInches": {
+      "type": "decimal"
+    },
+    "weightKg": {
+      "type": "decimal"
+    },
+    "weightLbs": {
+      "type": "decimal"
+    },
+    "bustCm": {
+      "type": "decimal"
+    },
+    "waistCm": {
+      "type": "decimal"
+    },
+    "hipsCm": {
+      "type": "decimal"
+    },
+    "bustInches": {
+      "type": "decimal"
+    },
+    "waistInches": {
+      "type": "decimal"
+    },
+    "hipsInches": {
+      "type": "decimal"
+    },
+    "currentCity": {
+      "type": "string"
+    },
+    "profession": {
+      "type": "string"
+    },
     "website": {
       "type": "string"
     },

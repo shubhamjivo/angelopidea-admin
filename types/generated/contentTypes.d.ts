@@ -606,10 +606,13 @@ export interface ApiContestantContestant extends Struct.CollectionTypeSchema {
           preset: 'defaultHtml';
         }
       >;
+    bustCm: Schema.Attribute.Decimal;
+    bustInches: Schema.Attribute.Decimal;
     country: Schema.Attribute.Relation<'manyToOne', 'api::country.country'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    currentCity: Schema.Attribute.String;
     dateOfBirth: Schema.Attribute.Date;
     dislikes: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     entries: Schema.Attribute.Relation<
@@ -619,6 +622,10 @@ export interface ApiContestantContestant extends Struct.CollectionTypeSchema {
     facebook: Schema.Attribute.String;
     flowers: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     heightCm: Schema.Attribute.Decimal;
+    heightFeet: Schema.Attribute.Decimal;
+    heightInches: Schema.Attribute.Decimal;
+    hipsCm: Schema.Attribute.Decimal;
+    hipsInches: Schema.Attribute.Decimal;
     instagram: Schema.Attribute.String;
     legacyId: Schema.Attribute.Integer & Schema.Attribute.Private;
     likes: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
@@ -631,13 +638,18 @@ export interface ApiContestantContestant extends Struct.CollectionTypeSchema {
     loves: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     portrait: Schema.Attribute.Media<'images'>;
+    profession: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    waistCm: Schema.Attribute.Decimal;
+    waistInches: Schema.Attribute.Decimal;
     website: Schema.Attribute.String;
+    weightKg: Schema.Attribute.Decimal;
+    weightLbs: Schema.Attribute.Decimal;
   };
 }
 
@@ -1087,6 +1099,7 @@ export interface ApiPhotoStoryPhotoStory extends Struct.CollectionTypeSchema {
     publishedOn: Schema.Attribute.Date & Schema.Attribute.Required;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
+    tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
