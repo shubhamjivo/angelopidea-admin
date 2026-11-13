@@ -65,6 +65,42 @@ export interface SectionsContent extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsHeroMosaic extends Struct.ComponentSchema {
+  collectionName: 'components_sections_hero_mosaics';
+  info: {
+    description: 'The story tiles at the top of a page: a tall lead, a full-height story, then two stacked. The slug tells the website which block shows it.';
+    displayName: 'Hero mosaic';
+    icon: 'apps';
+  };
+  attributes: {
+    slug: Schema.Attribute.String & Schema.Attribute.Required;
+    tiles: Schema.Attribute.Component<'sections.mosaic-tile', true> &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 4;
+        },
+        number
+      >;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SectionsMosaicTile extends Struct.ComponentSchema {
+  collectionName: 'components_sections_mosaic_tiles';
+  info: {
+    description: "One tile of the hero mosaic, in layout order (lead, full-height story, then the two stacked). Pick a story; the headline, link and pictures fall back to the story's own when left empty. The mobile image is the tile's portrait picture.";
+    displayName: 'Mosaic tile';
+    icon: 'picture';
+  };
+  attributes: {
+    article: Schema.Attribute.Relation<'oneToOne', 'api::article.article'>;
+    desktopImage: Schema.Attribute.Media<'images'>;
+    link: Schema.Attribute.String;
+    mobileImage: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFrame extends Struct.ComponentSchema {
   collectionName: 'components_shared_frames';
   info: {
@@ -157,6 +193,8 @@ declare module '@strapi/strapi' {
       'play.poll-option': PlayPollOption;
       'play.reader-pick': PlayReaderPick;
       'sections.content': SectionsContent;
+      'sections.hero-mosaic': SectionsHeroMosaic;
+      'sections.mosaic-tile': SectionsMosaicTile;
       'shared.frame': SharedFrame;
       'shared.link': SharedLink;
       'shared.picture': SharedPicture;

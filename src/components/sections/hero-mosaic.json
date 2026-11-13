@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_hero_mosaics",
+  "info": {
+    "displayName": "Hero mosaic",
+    "icon": "apps",
+    "description": "The story tiles at the top of a page: a tall lead, a full-height story, then two stacked. The slug tells the website which block shows it."
+  },
+  "options": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "regex": "^[A-Za-z0-9\\-_]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "tiles": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.mosaic-tile",
+      "max": 4
+    }
+  }
+}

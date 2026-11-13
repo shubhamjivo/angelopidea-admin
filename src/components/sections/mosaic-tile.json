@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_sections_mosaic_tiles",
+  "info": {
+    "displayName": "Mosaic tile",
+    "icon": "picture",
+    "description": "One tile of the hero mosaic, in layout order (lead, full-height story, then the two stacked). Pick a story; the headline, link and pictures fall back to the story's own when left empty. The mobile image is the tile's portrait picture."
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::article.article"
+    },
+    "title": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "desktopImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mobileImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

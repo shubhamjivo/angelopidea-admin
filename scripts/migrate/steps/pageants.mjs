@@ -279,11 +279,13 @@ async function importEntries(ctx) {
     titles.get(row.winner_id).push(row.wtitle_award);
   }
 
+  // The country is the contestant's own, as the old pages printed it: pgyconspic.country_id is
+  // unreliable (all of Miss Universe 2013 says India) and the old site never showed it.
   const { rows } = await ctx.legacy.query(
     `select coalesce(g.pic_id, ${WINNER_ONLY_OFFSET} + w.winner_id) as entry_id,
             coalesce(g.pageantyear_id, w.winner_pageantyearid) as edition_id,
             coalesce(g.contestent_id, w.winner_contestentid) as contestant_id,
-            coalesce(nullif(g.country_id, 0), c.cons_countryid) as country_id,
+            c.cons_countryid as country_id,
             g.pic_name, g.pic_order, c.cons_name, y.pgy_namey,
             w.winner_id, w.winner_dorder, w.pic as winner_pic, a.award_title
        from pgyconspic g

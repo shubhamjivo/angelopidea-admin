@@ -17,6 +17,7 @@
     "migrate:exclusive": "node --env-file=.env scripts/migrate/exclusive-videos.mjs",
     "migrate:fashion": "node --env-file=.env scripts/migrate/fashion.mjs",
     "migrate:pages": "node --env-file=.env scripts/migrate/pages.mjs",
+    "migrate:home": "node --env-file=.env scripts/migrate/home-page.mjs",
     "migrate:tags": "node --env-file=.env scripts/migrate/tags.mjs",
     "migrate:event-tags": "node --env-file=.env scripts/migrate/event-tags.mjs",
     "migrate:seo": "node --env-file=.env scripts/migrate/seo.mjs",

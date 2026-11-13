@@ -5,7 +5,7 @@
     "singularName": "page",
     "pluralName": "pages",
     "displayName": "Page",
-    "description": "A standalone page (Contact Us, Privacy Policy, \u2026) built from sections."
+    "description": "A standalone page (Contact Us, Privacy Policy, …) built from sections."
   },
   "options": {
     "draftAndPublish": true
@@ -24,7 +24,8 @@
     "section": {
       "type": "dynamiczone",
       "components": [
-        "sections.content"
+        "sections.content",
+        "sections.hero-mosaic"
       ]
     },
     "seo": {

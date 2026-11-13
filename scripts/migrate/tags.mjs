@@ -15,6 +15,7 @@ export const HOMEPAGE_TAGS = [
   { name: 'Top story', slug: 'top-story', description: 'Shown in the large tiles at the top of the homepage (the four newest).' },
   { name: 'Headline', slug: 'headline', description: 'Listed under "More headlines" on the homepage (the six newest).' },
   { name: 'Most read', slug: 'most-read', description: 'Listed under "Most read" on the homepage (the five newest).' },
+  { name: 'Angel Edit', slug: 'angel-edit', description: 'Shows a story in The Angel Edit block on the homepage (the six newest). Only tagged stories appear there.' },
 ];
 /** The tick box each tag replaces. */
 const FROM_FLAG = { 'top-story': 'topStory', headline: 'headline', 'most-read': 'mostRead' };
