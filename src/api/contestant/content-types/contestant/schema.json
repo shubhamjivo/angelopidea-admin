@@ -81,6 +81,12 @@
     "currentCity": {
       "type": "string"
     },
+    "hometown": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
     "profession": {
       "type": "string"
     },

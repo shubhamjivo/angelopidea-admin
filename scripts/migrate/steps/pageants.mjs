@@ -168,9 +168,11 @@ async function importContestants(ctx) {
   const slugs = createSlugRegistry(up.slugs);
   const { rows } = await ctx.legacy.query(
     `select c.*, ${day('c.cons_dob')} as dob, ${day('c.cons_asondate')} as as_on, co.count_name,
-            r.likes, r.dislikes, r.loves, r.flowers, p.pic_name
+            st.sate_name, ci.city_name, r.likes, r.dislikes, r.loves, r.flowers, p.pic_name
        from contestent_profile c
        left join country_master co on co.count_id = c.cons_countryid
+       left join state_master st on st.state_id = c.cons_stateid
+       left join city_master ci on ci.city_id = c.cons_hometownid
        left join (select contestent_id, sum(table_like)::int as likes, sum(table_dislike)::int as dislikes,
                          sum(table_sendlove)::int as loves, sum(table_sendflower)::int as flowers
                     from conlikedislike group by 1) r on r.contestent_id = c.cons_id
@@ -191,6 +193,9 @@ async function importContestants(ctx) {
       age: row.cons_age > 0 ? row.cons_age : null,
       ageAsOf: row.cons_age > 0 ? row.as_on : null,
       heightCm: positive(row.cons_heightcm),
+      // Her home town and state, which the old country-pageant contestant lists printed under her name.
+      hometown: text(row.city_name),
+      state: text(row.sate_name),
       website: text(row.cons_officalsite),
       facebook: text(row.cons_officalfbpage),
       instagram: text(row.cons_handle),
