@@ -33,6 +33,14 @@
       "relation": "manyToOne",
       "target": "api::pageant.pageant"
     },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author"
+    },
+    "publishedOn": {
+      "type": "date"
+    },
     "dek": {
       "type": "text"
     },
