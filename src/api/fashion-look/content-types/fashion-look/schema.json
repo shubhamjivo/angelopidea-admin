@@ -41,6 +41,11 @@
     "publishedOn": {
       "type": "date"
     },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
     "dek": {
       "type": "text"
     },
